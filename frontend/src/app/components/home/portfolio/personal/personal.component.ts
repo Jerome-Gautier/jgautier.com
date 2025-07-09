@@ -95,10 +95,8 @@ import { transition, trigger } from '@angular/animations';
             <span class="title">Nations contiguity with force directed graph</span>
             <span class="arrow">⇒</span>
           </h3>
-          <p>
-            Un calendrier intéractif destiné au suivi de performances dans le
-            cadre d'entrainements de musculation.
-          </p>
+          <p>Un graphique animé représentant les relations de contiguïté entre les pays du monde, ainsi qu'un onglet de recherche pour trouver et sélectionner rapidement un pays spécifique.</p>
+          <p>La structure de l'application est basée sur Angular, la visualisation des données et la "simulation de force" par la bibliothèque graphique D3.js.</p>
         </div>
       </a>
 
