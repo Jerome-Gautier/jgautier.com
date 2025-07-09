@@ -50,14 +50,14 @@ import { transition, trigger, useAnimation } from '@angular/animations';
             <a
               href="https://www.freecodecamp.org/jgautier"
               target="_blank"
-              class="font-semibold"
+              class="font-semibold hover:text-royal-blue transition-colors duration 400"
               >accréditations de développeur web</a
             >
             sur l'excellente plateforme d'apprentissage
             <a
               href="https://www.freecodecamp.org/"
               targer="_blank"
-              class="font-semibold"
+              class="font-semibold hover:text-royal-blue transition-colors duration 400"
               >freeCodeCamp</a
             >.
           </p>

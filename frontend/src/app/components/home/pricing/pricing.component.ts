@@ -66,8 +66,9 @@ import { ratesData, RatesData } from '../../../../../public/pricing';
             <p class="mt-2 ">
               Pour toute question ou demande de projet (devis gratuit) n'hésitez
               pas à
-              <button (click)="scrollToContact()" class="text-blue-500"
-                >me contacter &#8628;</button>
+              <button (click)="scrollToContact()" class="text-blue-500 cursor-pointer hover:text-blue-700">
+                me contacter &#8628;
+              </button>
             </p>
           </div>
           <div

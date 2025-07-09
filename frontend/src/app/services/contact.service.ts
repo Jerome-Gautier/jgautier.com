@@ -13,7 +13,7 @@ export interface ContactFormData {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:3100/api/contact';
+  private apiUrl = 'https://jgautier.com/api/contact';
 
   constructor(private http: HttpClient) {}
 

@@ -46,6 +46,14 @@ import { NgClass, NgIf } from '@angular/common';
           Je vous recontacterai dans les plus brefs délais.
         </p>
       </div>
+      <div class="succes-msg">
+        <p
+          *ngIf="isSubmitted"
+          class="text-green-500 text-sm mb-4"
+        >
+          Votre message a été envoyé avec succès !
+        </p>
+      </div>
       <form (ngSubmit)="onSubmit()" class="max-w-screen-sm w-full space-y-6">
         <div
           [@wobble]="nameWobble"
@@ -298,6 +306,7 @@ export class ContactComponent {
 
   onSubmit() {
     this.errorMessage = '';
+    this.isSubmitted = false;
     if (!this.validateForm()) {
       this.errorMessage = 'Veuillez remplir tous les champs obligatoires.';
       return;
@@ -307,7 +316,6 @@ export class ContactComponent {
 
       this.contactService.sendContactForm(this.formData).subscribe({
         next: (response) => {
-          console.log('Form submitted successfully:', response);
           this.isSubmitted = true;
           this.isLoading = false;
           this.formData = {

@@ -19,28 +19,28 @@ import { CommonModule } from '@angular/common';
           <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center">
             <!-- Navigation Links -->
             <div class="flex gap-6">
-              <a href="#home" class="hover:text-aqua-green transition-colors"
-                >Accueil</a
+              <button class="hover:text-aqua-green transition-colors" (click)="scrollTo('hero-section')"
+                >Accueil</button
               >
-              <a
-                href="#about-section"
+              <button
                 class="hover:text-aqua-green transition-colors w-[72px] text-center"
-                >À propos</a
+                (click)="scrollTo('about-section')"
+                >À propos</button
               >
-              <a
-                href="#portfolio-section"
+              <button
                 class="hover:text-aqua-green transition-colors"
-                >Portfolio</a
+                (click)="scrollTo('portfolio-section')"
+                >Portfolio</button
               >
-              <a
-                href="#pricing-section"
+              <button
                 class="hover:text-aqua-green transition-colors"
-                >Tarifs</a
+                (click)="scrollTo('pricing-section')"
+                >Tarifs</button
               >
-              <a
-                href="#contact-section"
+              <button
                 class="hover:text-aqua-green transition-colors"
-                >Contact</a
+                (click)="scrollTo('contact-section')"
+                >Contact</button
               >
             </div>
 
@@ -116,6 +116,11 @@ import { CommonModule } from '@angular/common';
     :host {
       display: block;
     }
+
+    button {
+      cursor: pointer;
+      transition: color 0.4s ease;
+    }
     
     @media (max-width: 768px) {
       .flex-col-mobile {
@@ -127,5 +132,12 @@ import { CommonModule } from '@angular/common';
 export class FooterComponent {
   get currentYear(): number {
     return new Date().getFullYear();
+  }
+
+  scrollTo(section: string) {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
